@@ -7,6 +7,8 @@ import jwt from 'koa-jwt'
 import auth from './routers/auth'
 import todoList from './routers/todoList'
 import markdown from './routers/markdown'
+import path from 'path'
+import serve from 'koa-static'
 
 let app=new koa();
 const router=koaRouter();
@@ -43,6 +45,7 @@ app.on('error',function(err,ctx){ //服务器错误信息
   console.log('server err', err);
 })
 
+app.use(serve(path.resolve('dist')));
 
 router.use('/auth',auth.routes()); //挂载到koa-router上
 router.use('/todo',jwt({secret:'koa-token-secret'}),todoList.routes())
