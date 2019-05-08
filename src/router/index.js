@@ -1,9 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TodoList from '@/components/TodoList'
-import Login from '@/components/Login'
-import ArticleEdit from '@/components/articleEdit'
-import ArticleDetail from '@/components/articleDetail'
 
 Vue.use(Router)
 
@@ -12,22 +8,22 @@ export default new Router({
     {
       path:'/',
       name:'Login',
-      component:Login
+      component:(resolve)=>require(['../components/Login.vue'],resolve)
     },
     {
       path:'/todoList',
       name:'todoList',
-      component:TodoList
+      component:(resolve)=>require(['../components/TodoList.vue'],resolve)
     },
     {
       path:'/markEdit',
       name:'markEdit',
-      component:ArticleEdit
+      component:(resolve)=>require(['../components/ArticleEdit.vue'],resolve)
     },
     {
       path:'/markDetail',
       name:'markDetail',
-      component:ArticleDetail
+      component:(resolve)=>require(['../components/articleDetail.vue'],resolve)
     }
   ]
 })
