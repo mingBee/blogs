@@ -18,7 +18,7 @@ export default new Router({
     {
       path:'/markEdit',
       name:'markEdit',
-      component:(resolve)=>require(['../components/ArticleEdit.vue'],resolve)
+      component:(resolve)=>require(['../components/articleEdit.vue'],resolve)
     },
     {
       path:'/markDetail',
