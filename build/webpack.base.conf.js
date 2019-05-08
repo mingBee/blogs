@@ -26,8 +26,8 @@ module.exports = {
     // 要引入的资源的名字：该模块提供给外部引用的名字(由对应的库自定)
     'vue': 'Vue',
     'vue-router': 'VueRouter',
-    'element-ui': 'ELEMENTUI',
-    'mavon-editor':'mavonEditor'
+    'element': 'ElementUI',
+    'mavonEditor':'mavonEditor'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
